@@ -22,14 +22,24 @@ public class Ejecutor2 {
         EstudiantePresencial e3 = new EstudiantePresencial("Alvaro", "Narvaez",
                 "212235", 19, 3, 100.2, 7.2);
 
+       
+        lista.add(e1);
+        lista.add(e2);
+        lista.add(e3);
         
-
-        ReportePresencial rd = new ReportePresencial("Reporte Presencial",
-                "Alimentos", "Segundo");
+        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i).calcularMatriculaPresencial();
+        }
+        
+        ReportePresencial rd = new ReportePresencial("Reporte Presencial", 
+                "Alimentos", "Sexto");
+        rd.establecerLista(lista);
+        rd.establecerTotalMatriculasPresencial();
+        rd.establecerPromedioGeneral();
         
         System.out.println("----------------------");
         System.out.println(rd);
-
+        
     }
 }
 /* Salida

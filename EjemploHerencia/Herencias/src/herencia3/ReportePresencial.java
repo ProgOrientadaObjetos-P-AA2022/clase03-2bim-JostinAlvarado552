@@ -47,7 +47,7 @@ public class ReportePresencial extends Reporte{
         return lista;
     }
     
-    public double obtenerTotalMatriculasDistancia(){
+    public double obtenerTotalMatriculasPresencial(){
         return totalMatriculaPresencial;
     }
     
@@ -55,9 +55,23 @@ public class ReportePresencial extends Reporte{
         return promedioGeneral;
     }
     
-    @Override
-    public String toString(){
-        return "";
+   @Override
+    public String toString() {
+
+        String cadena = String.format("%s\nCarrera: %s \n"
+                + "Ciclo: %s\n",
+                nombre,
+                carrera,
+                ciclo
+                );
+        cadena = String.format("%s\nListado de Estudiantes",cadena);
+        for (int i = 0; i < lista.size(); i++) {
+            cadena = String.format("%s\n%s", cadena,obtenerLista().get(i));
+        }
+        cadena = String.format("%s\nEl total de matriculas es: %.2f\nPromedio General: %.3f", cadena,obtenerTotalMatriculasPresencial(),obtenerPromedioGeneral());
+        return cadena;
+
+    }
     }
     
-}
+

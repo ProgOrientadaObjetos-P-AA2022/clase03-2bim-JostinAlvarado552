@@ -43,6 +43,7 @@ public class Estudiante {
         edadEstudiante = ed;
     }
     
+
     //  Métodos obtener para los datos o atributos de la clase
     // 6.  Método obtenerNombresEstudiante() : Cadena
     public String obtenerNombresEstudiante(){

@@ -11,4 +11,18 @@ package herencia4;
  */
 public class Reporte {
    protected String codigo;
+    public Reporte(String n) {
+        codigo = n;
+    }
+    public void establecerCodigo(String n) {
+        codigo = n;
+    }
+
+    public String obtenerCodigo() {
+        return codigo;
+    }
+    @Override
+    public String toString(){
+        return codigo;
+    }
 }
