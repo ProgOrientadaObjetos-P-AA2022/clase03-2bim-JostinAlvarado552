@@ -15,7 +15,8 @@ import herencia2.Estudiante;
 public class ReporteEstudiante extends Reporte {
 
     ArrayList<Estudiante> lista;
-double totalMatriculas;
+    double totalMatriculas;
+
     public ReporteEstudiante(String n) {
         super(n);
     }
@@ -27,6 +28,7 @@ double totalMatriculas;
     public ArrayList<Estudiante> obtenerLista() {
         return lista;
     }
+
     public void establecerTotalMatriculas() {
 
         for (int i = 0; i < lista.size(); i++) {
@@ -34,8 +36,9 @@ double totalMatriculas;
                     + lista.get(i).getMatricula();
         }
     }
-    public double obtenerTotalMatriculas(){
-    return totalMatriculas;
+
+    public double obtenerTotalMatriculas() {
+        return totalMatriculas;
     }
 
     @Override
@@ -44,8 +47,8 @@ double totalMatriculas;
         for (int i = 0; i < lista.size(); i++) {
             cadena = String.format("%s\n%s\n", cadena, obtenerLista().get(i));
         }
-        cadena = String.format("%s\nTotal Matriculas:%.2f\n", cadena,totalMatriculas);
-        
+        cadena = String.format("%s\nTotal Matriculas:%.2f\n", cadena, totalMatriculas);
+
         return cadena;
 
     }
